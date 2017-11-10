@@ -1,0 +1,362 @@
+---
+saveScreen: True
+screenshotTimeout: 30
+currentDriver: "android"
+maxTime: 10800
+#resultDir: "D:\\automonkey\\result"
+pageobject: True
+capability:
+  deviceName: ""
+  newCommandTimeout: 120
+  launchTimeout: 120000
+  platformVersion: ""
+  platformName: ""
+  autoWebview: "False"
+  autoLaunch: "True"
+  noReset: "False"
+androidCapability:
+  deviceName: "android"
+  appPackage: "com.panda.videoliveplatform"
+  appActivity: "com.panda.videoliveplatform.activity.WelcomeActivity"
+  app: ""
+#iosCapability:
+#  deviceName: "iPhone 6"
+#  bundleId: ""
+#  screenshotWaitTimeout: "10"
+#  platformVersion: "9.1"
+#  autoAcceptAlerts: "true"
+#  app: ""
+#defineUrl:
+#- "//*[contains(@resource-id, 'liveitemroomname')]"
+#- "//*[contains(@resource-id, 'main_user_btn')]"
+#- "//*[@resource-id='com.xueqiu.android:id/indicator']//*[@selected='true']"
+#- "//*[@resource-id='com.xueqiu.android:id/tab_name' and @selected='true']"
+#- "//UIANavigationBar[1]"
+#- "//*[contains(@name, '_title')]"
+#- "//*[contains(@resource-id, 'action_bar_title')]"
+#baseUrl:
+#- ".*MainActivity"
+#- ".*ShowActivity*"
+#xpathAttributes:
+#- "name"
+#- "label"
+#- "value"
+#- "resource-id"
+#- "content-desc"
+#- "index"
+#- "text"
+maxDepth: 20
+needSwipe: true
+headFirst: true
+enterWebView: false
+urlBlackList:
+- ".*ChannelManageActivity.*"
+- ".*HostIdentificationActivity.*"
+#urlWhiteList :
+#-
+backButton:
+- "//*[@resource-id='com.panda.videoliveplatform:id/iv_return']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/img_return']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/close_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/button_full_control_return']"
+- "//*[@resource-id='action_back']"
+- "//*[@resource-id='android:id/up']"
+- "//*[@resource-id='android:id/home']"
+- "//*[@resource-id='android:id/action_bar_title']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/xy_screen_shot_dialog_close_background']"
+- "//*[@name='nav_icon_back']"
+- "//*[@name='Back']"
+- "//*[@name='返回']"
+#- "//UIAButton[@name='取消']"
+#- "//UIAButton[@label='返回']"
+#- "//UIAButton[@name='关闭']"
+#- "//UIAButton[@name='首页']"
+firstList:
+- "//*[@resource-id='com.panda.videoliveplatform:id/img_fullscreen']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/xy_score_rank_close_layout']"
+- "//android.widget.ListView//android.widget.Button"
+- "//android.widget.ListView//android.widget.TextView"
+#- "//UIAPopover//*"
+#- "//UIAWindow[3]//*"
+#- "//UIAWindow[2]//*"
+selectedList:
+#android非空标签
+- //*[clickable="true"]
+- //*[clickable="true"]//android.widget.TextView[string-length(@text)>0 and string-length(@text)<20]
+- //android.widget.EditText
+- //*[contains(name(), 'Text') and string-length(@text)>0 and string-length(@text)<20 ]
+#ios
+- //*[contains(name(), 'Text') and string-length(@value)>0 and string-length(@value)<20 ]
+#通用的button和image
+- //*[contains(name(), 'Button')]
+- //*[contains(name(), 'Image')]
+#todo:如果多个规则都包含相同控件, 如何排序
+#处于选中状态的同级控件最后点击
+lastList:
+- "//*[@resource-id='com.panda.videoliveplatform:id/iv_home_search']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/main_column_live_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/main_live_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/main_user_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/main_girl_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/nav_charge']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/ll_userinfo']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/iv_avatar']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/iv_settings']"
+- "//*[@class='android.widget.ImageButton']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/toolbar_title' and @text='登录']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/cate_more']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/btn_xingyan_list']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/faceButton']"
+#ios 底层tab栏
+- "//UIAButton[../UIAButton[@value='1']]"
+blackList:
+#排除掉ios的状态栏
+- "//UIAStatusBar//*"
+- "//*[@resource-id='com.panda.videoliveplatform:id/category_add']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/cate_name']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/nav_scan']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/account_and_security']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/my_account_update']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/update_status']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txtVersion']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_title']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/live_status_label']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_logout']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/iv_right']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/iv_icon']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/nav_activity_new_signin']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/imageview_task_item_icon']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/textview_task_item_name']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/textview_task_item_desc']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/ico1']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/iv_remind_avatar']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_remind_host_name']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_remind_room_class']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_signin_status']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/nav_apply_host']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/nav_activity_center']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/pay_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/host_header']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/bamboo_height']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/other_num_layout']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/edit_other_num']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_nickname_label']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_modify_nickname']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/text_nickname']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/userinfo_head_img']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/lock_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/bammboo_task']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/btn_sound_only']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/button_full_control_gift']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/button_full_control_danmu_flag']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/textview_full_control_title']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/emoji_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/textTextView']"
+- "//*[@class='android.widget.LinearLayout']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/img_share']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/goto_login']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/gift_btn']"
+- "//*[@resource-id='android.webkit.WebView']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/gift_show_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/img_more']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/img_people']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/mini_catogary_name']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/mini_room_id']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_personnum']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/mini_room_name']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_live_status_hint']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/iv_more']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_personnum']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/title_text']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_fans_count']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/share_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/livegive_gift']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/chatListView']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_message']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_online_num']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_name']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/iv_rank']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_room_name']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_city']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/iv_level']"
+#- "//*[@resource-id='com.panda.videoliveplatform:id/iv_avatar']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/gift_name']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/gift_price']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/gift_img']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/username']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_host_people']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_bamboo']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_room_name']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/star_iv']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_jubao']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/cbLoopViewPager']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_room_xid']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/llt_host_info']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/img_room_user_avatar']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/img_host_avatar']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/img_guard_level_icon']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/img_level_icon']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/img_site_level_icon']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/img_git_img']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/combo_num_view']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/img_sender_avatar']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_gift_send_nickName']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_gift_send_giftname']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_xid']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/loading_tv']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/bamboo_iv']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/msg_content_tv']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/msg_avatar_iv']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/screen_shot_circle_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/screen_shot_weixin_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/screen_shot_weibo_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/screen_shot_qq_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/screen_shot_qzone_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_star_val']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_host_nickName']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_rid']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_follow']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_host_signature']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_fans_num']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_follow_num']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/llt_host_info']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_host_nickName']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/txt_room_person_num']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/img_rome_user_level']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/rcv_room_user']"
+#- "//*[@resource-id='com.panda.videoliveplatform:id/txt_host_star_val']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/host_lv_level_process']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/layout_host_lv_info_level']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/layout_host_lv_info_xingxing']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/bamboo_tishi_tv']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/super_gift_marquee_layout']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/cbLoopViewPager']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/cb_fullscreen_lock']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/bamboo_status']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/tv_bamboos_num']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/layout_user_list']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/emotion_btn']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/pay_cmt_cb']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/btn_guard']"
+- "扫一扫"
+- "安全与隐私"
+- "检查更新"
+- "活动中心"
+- "我要当主播"
+- "头像"
+- "更换"
+- "修改"
+- "注册"
+- "忘记密码"
+- "lastLiveTimeTxt"
+extrablackList:
+#[54,1725][378,1872] [378,1725][702,1872] [702,1725][1026,1872]
+- key: "//*[@class='android.view.View']"
+  url: ".*WebLoginActivity.*"
+  bounds: "[10,1200][1100,1900]"
+elementActions:
+- action: "click"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/main_user_btn']"
+  times: 1
+  pri: 1
+- action: "click"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/tv_click2login']"
+  times: 1
+  pri: 1
+- action: "595499"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/searchedit']"
+  times: 1
+  pri: 0
+- action: "click"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/image_button_search']"
+  times: 1
+  pri: 0
+- action: "swipeto(driver,\"down\")"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/tv_hint_content']"
+  times: 1
+- action: "swipeto(driver,\"left\")"
+  idOrName: "左右滑动可切换直播间"
+  times: 1
+elementActionsInanyURLwilldo:
+- action: "click"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/img_fullscreen']"
+  times: 1
+  total: 20
+- action: "click"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/iv_player_enlarge']"
+  times: 1
+  total: 20
+- action: "click"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/btn_emoji']"
+  times: 1
+  total: 20
+- action: "666"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/textview_full_control_text_msg']"
+  times: 1
+  total: 20
+- action: "click"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/button_full_control_danmu_send']"
+  times: 1
+  total: 20
+- action: "click"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/messageEditText']"
+  times: 1
+  total: 20
+- action: "666666"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/messageEditText']"
+  times: 1
+  total: 20
+- action: "click"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/faceButton']"
+  times: 1
+  total: 15
+- action: "click"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/itemImage']"
+  times: 1
+  total: 15
+- action: "click"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/sendButton']"
+  times: 2
+  total: 20
+- action: "click"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/button_full_control_refresh']"
+  times: 1
+- action: "1111111111"
+  idOrName: "//*[@class='android.widget.EditText']"
+  times: 2
+  pri: 1
+  index: 0
+  url: ".*WebLoginActivity.*"
+- action: "111111"
+  idOrName: "//*[@class='android.widget.EditText']"
+  times: 2
+  pri: 1
+  index: 1
+  url: ".*WebLoginActivity.*"
+- action: "click"
+  idOrName: "//*[@content-desc='登录' and @class='android.view.View' and @clickable='true']"
+  times: 2
+  pri: 1
+  url: ".*WebLoginActivity.*"
+- action: "click"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/send_cmt_btn']"
+  times: 1
+  total: 2
+- action: "1"
+  idOrName: "//*[@resource-id='com.panda.videoliveplatform:id/commentcontent']"
+  times: 1
+  total: 2
+startupActions:
+- "swipeto(driver,\"left\")"
+- "swipeto(driver,\"right\")"
+- "swipeto(driver,\"right\")"
+- "swipeto(driver,\"left\")"
+#- "swipeto(driver,\"left\")"
+beforeRefreshpageAction:
+- "swipeto(driver,\"up\")"
+startupClosePopenSysmenu:
+- "//*[@resource-id='android:id/button1']"
+- "//*[@resource-id='com.lbe.security.miui:id/accept']"
+- "//*[@test='允许' and @class='android.widget.Button' and @package='android]"
+- "//*[@resource-id='com.huawei.systemmanager:id/btn_allow']"
+- "//*[@resource-id='com.panda.videoliveplatform:id/btnIgnore']"
