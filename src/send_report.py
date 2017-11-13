@@ -9,10 +9,10 @@ day = time.strftime('%Y-%m-%d', time.localtime(time.time()))
 from optparse import OptionParser
 
 def sendmail(toMail, subject, content):
-    smtpHost = 'postman.ops.pandatv.com'
-    sslPort = '465'
-    fromMail = 'qa@postman.ops.pandatv.com'
-    username = 'qa@postman.ops.pandatv.com'
+    smtpHost = 'xx.pandatv.com'
+    sslPort = 'x'
+    fromMail = 'qa@xx.pandatv.com'
+    username = 'qa@xx.pandatv.com'
     password = '1'
 
     encoding = 'utf-8'
@@ -36,9 +36,9 @@ def sendmail(toMail, subject, content):
 
 def sender(subject,email,url,tomail):
     _, api = url.split(':8080')
-    url = 'http://10.31.131.43:8080' + api
-    fromMail = 'qa@postman.ops.pandatv.com'
-    toMail = ['zhangzhao@panda.tv', 'zhanglihui@panda.tv','libing@panda.tv']
+    url = 'http://xx:8080' + api
+    fromMail = 'qa@xx.pandatv.com'
+    toMail = ['xx@panda.tv']
     toMail.append(tomail)
     file = open(email,'r', encoding='UTF-8')
     html =''
@@ -61,4 +61,3 @@ if __name__ == '__main__':
     (options, args) = cmd.parse_args()
     sender(options.title,options.email,options.url,options.tomail)
 
-#python sendtomail.py -t [自动化报告]Pandatv_uimonkeytest_android#56 -f D:\automock\result\2017_01_23_12_17_16\TestReprot.html -a baidul.com -p zhangzhao@panda.tv
