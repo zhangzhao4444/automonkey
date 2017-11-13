@@ -13,7 +13,7 @@ def sendmail(toMail, subject, content):
     sslPort = '465'
     fromMail = 'qa@postman.ops.pandatv.com'
     username = 'qa@postman.ops.pandatv.com'
-    password = '1PimRC6yvg2i'
+    password = '1'
 
     encoding = 'utf-8'
     mail = MIMEMultipart('alternative')
